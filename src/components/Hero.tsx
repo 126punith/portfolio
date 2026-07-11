@@ -81,7 +81,7 @@ export function Hero() {
             </a>
             <a
               href="/resume.pdf"
-              download
+              download="Punith_Manthri_CV.pdf"
               className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-accent hover:text-accent"
             >
               <FiDownload />
