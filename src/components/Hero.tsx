@@ -21,32 +21,57 @@ export function Hero() {
       id="top"
       className="relative flex min-h-[100svh] flex-col justify-center pb-16 pt-28"
     >
-      <div className="grid items-center gap-10 lg:grid-cols-[1fr_auto] lg:gap-16">
+      <div className="flex flex-col items-center gap-10 md:grid md:grid-cols-[auto_1fr] md:items-center md:gap-12 lg:gap-16">
         <motion.div
-          initial={reduce ? false : { opacity: 0, y: 28 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="shrink-0"
+          initial={reduce ? false : { opacity: 0, scale: 0.94 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="mb-4 flex items-center gap-2 text-sm text-muted">
+          <div className="relative">
+            <div
+              aria-hidden
+              className="absolute -inset-3 rounded-full bg-accent/20 blur-2xl"
+            />
+            <div className="relative overflow-hidden rounded-full ring-2 ring-accent/40 ring-offset-4 ring-offset-background">
+              <Image
+                src={profilePhoto}
+                alt={`${resume.name} — ${resume.shortTitle}`}
+                width={280}
+                height={280}
+                priority
+                className="size-[160px] object-cover sm:size-[200px] md:size-[220px] lg:size-[260px]"
+              />
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="w-full text-center md:text-left"
+          initial={reduce ? false : { opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <p className="mb-4 flex items-center justify-center gap-2 text-sm text-muted md:justify-start">
             <FiMapPin className="text-accent" />
             {resume.location} · Remote-ready
           </p>
 
-          <h1 className="font-[family-name:var(--font-display)] text-[clamp(2.75rem,8vw,5rem)] leading-[0.95] tracking-[-0.03em] text-foreground">
+          <h1 className="font-[family-name:var(--font-display)] text-[clamp(2.5rem,7vw,4.75rem)] leading-[0.95] tracking-[-0.03em] text-foreground">
             {resume.name}
           </h1>
 
-          <p className="mt-5 max-w-2xl text-lg text-muted sm:text-xl">
+          <p className="mt-5 max-w-2xl text-lg text-muted sm:text-xl md:mx-0 mx-auto">
             {resume.title}
           </p>
 
-          <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted/90 sm:text-base">
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted/90 sm:text-base md:mx-0 mx-auto">
             4+ years shipping production React Native apps. Creator of{" "}
             <span className="text-accent">react-native-pdf-jsi</span> — 89K+ npm
             downloads. Open to remote roles.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-3">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3 md:justify-start">
             <a
               href={`mailto:${resume.email}`}
               className="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-2.5 text-sm font-medium text-[#041018] transition-opacity hover:opacity-90"
@@ -64,7 +89,7 @@ export function Hero() {
             </a>
           </div>
 
-          <div className="mt-8 flex items-center gap-4">
+          <div className="mt-8 flex items-center justify-center gap-4 md:justify-start">
             <a
               href={resume.social.github}
               target="_blank"
@@ -101,30 +126,6 @@ export function Hero() {
             >
               <SiNpm size={20} />
             </a>
-          </div>
-        </motion.div>
-
-        <motion.div
-          className="mx-auto w-fit lg:mx-0"
-          initial={reduce ? false : { opacity: 0, scale: 0.92 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <div className="relative">
-            <div
-              aria-hidden
-              className="absolute -inset-3 rounded-full bg-accent/20 blur-2xl"
-            />
-            <div className="relative overflow-hidden rounded-full ring-2 ring-accent/40 ring-offset-4 ring-offset-background">
-              <Image
-                src={profilePhoto}
-                alt={`${resume.name} — ${resume.shortTitle}`}
-                width={280}
-                height={280}
-                priority
-                className="size-[200px] object-cover sm:size-[240px] lg:size-[280px]"
-              />
-            </div>
           </div>
         </motion.div>
       </div>
