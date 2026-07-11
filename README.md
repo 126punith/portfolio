@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Punith Manthri — Portfolio
 
-## Getting Started
+Professional portfolio site for job search. Built with **Next.js 15**, **TypeScript**, and **Tailwind CSS v4**. Content lives in a single file: [`src/data/resume.ts`](src/data/resume.ts).
 
-First, run the development server:
+## Quick start
 
 ```bash
+cd portfolio
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command         | Description                          |
+| --------------- | ------------------------------------ |
+| `npm run dev`   | Local development server             |
+| `npm run build` | Static export to `out/`              |
+| `npm run start` | Not used for static export           |
+| `npm run lint`  | ESLint                               |
 
-## Learn More
+## Update your content
 
-To learn more about Next.js, take a look at the following resources:
+Edit [`src/data/resume.ts`](src/data/resume.ts) — name, summary, skills, experience, projects, social links, etc. The whole site updates from that file.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Replace [`public/resume.pdf`](public/resume.pdf) with your real resume PDF (keep the same filename).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy
 
-## Deploy on Vercel
+The project uses `output: "export"` in [`next.config.ts`](next.config.ts), so `npm run build` produces a static site in `out/`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Vercel (recommended)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push this repo to GitHub.
+2. Import the repo at [vercel.com/new](https://vercel.com/new).
+3. Framework preset: Next.js — leave defaults.
+4. Deploy. Optional: set `NEXT_PUBLIC_SITE_URL` to your production URL for correct Open Graph metadata.
+
+### GitHub Pages
+
+1. In [`next.config.ts`](next.config.ts), uncomment and set `basePath` / `assetPrefix` to your repo name (e.g. `/portfolio`).
+2. Build: `npm run build`.
+3. Publish the `out/` folder (GitHub Actions `peaceiris/actions-gh-pages` or Pages from a `gh-pages` branch).
+
+Example workflow snippet:
+
+```yaml
+- run: npm ci && npm run build
+- uses: peaceiris/actions-gh-pages@v4
+  with:
+    github_token: ${{ secrets.GITHUB_TOKEN }}
+    publish_dir: ./out
+```
+
+## Stack
+
+- Next.js 15 (App Router) + static export
+- TypeScript
+- Tailwind CSS v4
+- Framer Motion
+- react-icons
+
+## License
+
+Personal portfolio — feel free to fork and adapt for your own use.
