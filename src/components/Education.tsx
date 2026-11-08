@@ -5,15 +5,13 @@ import { FadeIn } from "./FadeIn";
 
 export function Education() {
   return (
-    <section id="education" className="scroll-mt-24 py-20 sm:py-28">
+    <section id="education" className="scroll-mt-24 py-16 sm:py-24">
       <div className="grid gap-12 lg:grid-cols-2">
         <FadeIn>
-          <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-accent">
-            Education
-          </p>
+          <p className="eyebrow">Education</p>
           <h2 className="section-heading">Background</h2>
-          <div className="mt-8 border border-border bg-card p-6">
-            <h3 className="text-lg font-medium text-foreground">
+          <div className="card mt-8 p-6">
+            <h3 className="text-lg font-semibold text-foreground">
               {resume.education.degree}
             </h3>
             <p className="mt-1 text-accent">{resume.education.school}</p>
@@ -22,7 +20,7 @@ export function Education() {
             </p>
           </div>
 
-          <h3 className="mt-10 text-sm font-medium uppercase tracking-[0.15em] text-muted">
+          <h3 className="mt-10 text-xs font-semibold uppercase tracking-[0.15em] text-muted">
             Languages
           </h3>
           <ul className="mt-4 space-y-3">
@@ -39,9 +37,7 @@ export function Education() {
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-accent">
-            More
-          </p>
+          <p className="eyebrow">More</p>
           <h2 className="section-heading">Additional info</h2>
           <ul className="mt-8 space-y-4">
             {resume.additional.map((item) => (

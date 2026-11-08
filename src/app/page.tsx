@@ -12,15 +12,21 @@ import { Footer } from "@/components/Footer";
 export default function Home() {
   return (
     <>
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-[var(--accent-contrast)]"
+      >
+        Skip to content
+      </a>
       <Nav />
-      <main className="mx-auto max-w-6xl px-5 sm:px-8">
+      <main id="main" className="mx-auto max-w-6xl px-5 sm:px-8">
         <Hero />
-        <About />
-        <Skills />
+        <Achievements />
         <Experience />
         <Projects />
+        <Skills />
         <RecentUpdates />
-        <Achievements />
+        <About />
         <Education />
         <Footer />
       </main>
