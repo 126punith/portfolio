@@ -107,6 +107,16 @@ export const resume = {
 
   experience: [
     {
+      company: "Self-employed",
+      role: "Independent Engineer / Open Source Maintainer",
+      location: "Bangalore, India",
+      period: "Oct 2025 – Present",
+      bullets: [
+        "Created React Native Background Location Pro and own architecture, documentation, release management and developer onboarding end to end",
+        "Launched the technical deep dive to 21K+ views on r/reactnative and ranked on Google Page 1 for related background location queries",
+      ],
+    },
+    {
       company: "Utilitarian Labs",
       role: "React Native Developer (Senior)",
       location: "Bangalore, India",
