@@ -107,13 +107,14 @@ export const resume = {
 
   experience: [
     {
-      company: "Self-employed",
-      role: "Independent Engineer / Open Source Maintainer",
+      company: "Independent Engineer / Open Source Maintainer",
+      role: "Founder, React Native Background Location Pro",
       location: "Bangalore, India",
-      period: "Oct 2025 – Present",
+      period: "Oct 2026 – Present",
       bullets: [
-        "Created React Native Background Location Pro and own architecture, documentation, release management and developer onboarding end to end",
-        "Launched the technical deep dive to 21K+ views on r/reactnative and ranked on Google Page 1 for related background location queries",
+        "Created React Native Background Location Pro, a production-grade native tracking SDK for React Native focused on process-death resilience",
+        "Launched and grew technical reach to 21K+ views on r/reactnative, driving direct developer adoption and ecosystem visibility",
+        "Ranked on Google Page 1 through product documentation, technical deep dives and developer-focused content strategy",
       ],
     },
     {
