@@ -66,8 +66,8 @@ export function Hero() {
           </p>
 
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted/90 sm:text-base md:mx-0 mx-auto">
-            4+ years shipping production React Native apps. Creator of{" "}
-            <span className="text-accent">react-native-pdf-jsi</span> — 89K+ npm
+            5+ years shipping production React Native apps. Creator of{" "}
+            <span className="text-accent">react-native-pdf-jsi</span> — 390K+ npm
             downloads. Open to remote roles.
           </p>
 

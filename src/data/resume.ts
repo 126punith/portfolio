@@ -15,7 +15,7 @@ export const resume = {
   },
 
   summary:
-    "React Native Developer with 4+ years building and maintaining cross-platform mobile applications for Android and iOS in JavaScript and TypeScript. Strong in Redux and state management, REST APIs and third-party integrations, reusable scalable components, debugging and performance optimization, Git version control, and Agile delivery with UI/UX and backend teams. Creator of react-native-pdf-jsi (89K+ total npm downloads) and additional open-source React Native libraries (91K+ total npm downloads). Experience with native modules (Android/iOS), Firebase, secure authentication, and production deployments serving 800+ active drivers and enterprise field agents.",
+    "React Native Developer with 5+ years building and maintaining cross-platform mobile applications for Android and iOS in JavaScript and TypeScript. Strong in Redux and state management, REST APIs and third-party integrations, reusable scalable components, debugging and performance optimization, Git version control, and Agile delivery with UI/UX and backend teams. Creator of react-native-pdf-jsi (390K+ total npm downloads), React Native Background Location Pro (a native, process-death-resilient tracking SDK), and additional open-source React Native libraries. Experience with native modules (Android/iOS), Firebase, secure authentication, and production deployments serving 800+ active drivers and enterprise field agents.",
 
   skills: [
     {
@@ -160,10 +160,10 @@ export const resume = {
         "High-performance PDF rendering library leveraging JavaScript Interface (JSI) architecture. Eliminates bridge bottlenecks for 3x faster rendering than traditional solutions, with full TypeScript support.",
       url: "https://www.npmjs.com/package/react-native-pdf-jsi",
       npmPackage: "react-native-pdf-jsi",
-      downloads: "89,000+",
+      downloads: "390,000+",
       period: "Jan 2023 – Present",
       highlights: [
-        "89K+ total npm downloads with 4.8/5 community rating",
+        "390K+ total npm downloads with 4.8/5 community rating",
         "3x faster rendering vs bridge-based alternatives",
         "Used in production for document management and reporting",
       ],
@@ -201,8 +201,8 @@ export const resume = {
   achievements: [
     {
       label: "Open Source Impact",
-      value: "91K+",
-      detail: "Total npm downloads across published packages; react-native-pdf-jsi alone at 89K+",
+      value: "390K+",
+      detail: "Total npm downloads across published packages, led by react-native-pdf-jsi",
     },
     {
       label: "Bisleri Driver App",
@@ -231,6 +231,91 @@ export const resume = {
     },
   ],
 
+  recentUpdates: [
+    {
+      kind: "Community",
+      title: "Background location that survives process death",
+      source: "r/reactnative",
+      metric: "21K views",
+      summary:
+        "Shared what I learned building a native-only background location SDK for the React Native New Architecture, and why JS-driven tracking breaks under real OS lifecycle events.",
+      points: [
+        "Keep capture, persistence and retries native; JS acts as an observer, not a single point of failure",
+        "Motion gates must fail open: if sensors misclassify or permissions are denied, fall back to always-on GPS",
+        "Native SQLite queue with idempotency keys, exponential backoff and a dead-letter queue to avoid lost or duplicate uploads",
+        "Store-approval blueprint for Apple's prominent disclosure and Android foreground service declarations",
+      ],
+      links: [
+        {
+          label: "Read the discussion",
+          url: "https://www.reddit.com/r/reactnative/comments/1xq4m83/i_built_a_background_location_sdk_for_react/",
+        },
+      ],
+    },
+    {
+      kind: "Article",
+      title: "Technical deep dive on React Native process death",
+      source: "DEV Community",
+      summary:
+        "A long-form breakdown of how Android and iOS kill React Native apps in the background, what actually survives, and how to design tracking pipelines that recover. The post picked up fast traction within its first day.",
+      points: [
+        "How jetsam and low-memory kills affect both JS and native code",
+        "Why durable on-device state plus an OS relaunch path is what real survival means",
+      ],
+      links: [
+        {
+          label: "Read on DEV",
+          url: "https://dev.to/punith_sunny_4232b5437c2c/-how-my-technical-deep-dive-on-react-native-process-death-reached-18k-views-in-18-hours-4lg",
+        },
+      ],
+    },
+    {
+      kind: "Release",
+      title: "React Native Background Location Pro",
+      source: "npm · react-native-background-location-pro-eval",
+      summary:
+        "Production-grade background location tracking that survives app kills, reboots and offline periods, with no third-party tracking SDKs. Built on TurboModules and JSI with a Kotlin foreground service on Android and Swift CLLocationManager on iOS.",
+      points: [
+        "Free evaluation build runs the full native pipeline in development builds; release builds report buildTier 'release' until licensed",
+        "SQLite buffering with idempotent batch sync, classified retries, Retry-After, jitter and a dead-letter queue",
+        "Three live-switchable tracking profiles with a CoreMotion low-power gate and a significant-change and BGAppRefreshTask watchdog",
+        "One-time license with full native source: Android $39, iOS $59, or both for $89, with lifetime updates",
+      ],
+      links: [
+        {
+          label: "View on npm",
+          url: "https://www.npmjs.com/package/react-native-background-location-pro-eval",
+        },
+        {
+          label: "Docs",
+          url: "https://background-location-pro.vercel.app/",
+        },
+        {
+          label: "GitHub",
+          url: "https://github.com/126punith/react-native-background-location-pro-eval",
+        },
+      ],
+    },
+    {
+      kind: "Milestone",
+      title: "react-native-pdf-jsi crosses 390K+ downloads",
+      source: "npm",
+      summary:
+        "The JSI-accelerated PDF viewer for React Native passed 390K+ total npm downloads and continues to power document workflows in production apps around the world.",
+      points: [],
+      links: [
+        {
+          label: "View on npm",
+          url: "https://www.npmjs.com/package/react-native-pdf-jsi",
+        },
+        {
+          label: "GitHub",
+          url: "https://github.com/126punith/react-native-pdf-jsi",
+        },
+      ],
+    },
+  ],
+
   education: {
     degree: "BE, Mechanical Engineering",
     school: "KSSEM (K S School of Engineering and Management)",
@@ -256,6 +341,7 @@ export const resume = {
     { id: "skills", label: "Skills" },
     { id: "experience", label: "Experience" },
     { id: "projects", label: "Projects" },
+    { id: "recent-updates", label: "Updates" },
     { id: "achievements", label: "Achievements" },
     { id: "contact", label: "Contact" },
   ],

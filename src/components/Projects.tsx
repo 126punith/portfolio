@@ -13,7 +13,7 @@ export function Projects() {
         </p>
         <h2 className="section-heading">Libraries I maintain</h2>
         <p className="mt-4 max-w-2xl text-muted">
-          91K+ total npm downloads across published React Native packages.
+          390K+ total npm downloads across published React Native packages.
         </p>
       </FadeIn>
 
