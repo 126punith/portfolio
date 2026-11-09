@@ -129,7 +129,7 @@ export function Hero() {
                 width={300}
                 height={300}
                 priority
-                className="size-[128px] object-cover sm:size-[168px] md:size-[240px] lg:size-[300px]"
+                className="size-[128px] object-cover object-[62%_40%] sm:size-[168px] md:size-[240px] lg:size-[300px]"
               />
             </div>
           </div>
